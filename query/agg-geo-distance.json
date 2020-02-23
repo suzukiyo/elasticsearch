@@ -1,0 +1,45 @@
+{
+  "size": 0,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "hoge": {
+                    "value": "hogehoge"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "location_aggs": {
+      "geo_distance": {
+        "field": "location.geolocation",
+        "origin": "35.693901, 139.703430",
+        "unit" : "km",
+        "ranges": [
+          {
+            "from": 10,
+            "to": 20
+          }
+        ]
+      },
+      "aggs": {
+        "location_hits": {
+          "top_hits": {
+            "_source": ["hoge", "fuga"],
+            "size": 20
+          }
+        }
+      }
+    }
+  }
+}
