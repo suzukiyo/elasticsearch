@@ -1,1 +1,1 @@
-# elasticsearch-training
+# elasticsearch
