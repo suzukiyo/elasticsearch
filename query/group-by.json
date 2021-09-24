@@ -1,0 +1,42 @@
+{
+  "size": 100,
+  "from": 0,
+  "_source": false,
+  "sort": [
+    {
+      "***": "desc"
+    }
+  ],
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "match_all": {}
+        }
+      ]
+    }
+  },
+  "collapse": {
+    "field": "***",
+    "inner_hits": {
+      "name": "***",
+      "stored_fields": [
+        "***",
+        "***"
+      ],
+      "size": 100,
+      "sort": [
+        {
+          "***": "desc"
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "total": {
+      "cardinality": {
+        "field": "***"
+      }
+    }
+  }
+}

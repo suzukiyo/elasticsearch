@@ -1,0 +1,18 @@
+{
+  "_source": false,
+  "query": {
+    "term": {
+      "***": {
+        "value": "***"
+      }
+    }
+  },
+  "aggs": {
+    "duplicate": {
+      "terms": {
+        "field": "****",
+        "size": 1000
+      }
+    }
+  }
+}

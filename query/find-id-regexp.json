@@ -1,0 +1,23 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "script": {
+            "script": "doc['_id'][0].indexOf('***') == -1"
+          }
+        },
+        {
+          "script": {
+            "script": "doc['_id'][0].indexOf('***') == -1"
+          }
+        },
+        {
+          "script": {
+            "script": "doc['_id'][0].indexOf('***') == -1"
+          }
+        }
+      ]
+    }
+  }
+}
